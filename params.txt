@@ -1,0 +1,70 @@
+# https://docs.microsoft.com/en-us/azure/machine-learning/how-to-setup-authentication?tabs=cli
+az ad sp create-for-rbac --sdk-auth --name project-ml-auth
+az ad sp create-for-rbac --sdk-auth --name ml-auth --role Contributor --scopes /subscriptions/ac113154-2e6f-499c-9be7-09bd5fba4d3a
+
+{
+  "clientId": "5a0b7605-1a9e-4b6f-a0a0-c5c8fa916bb6",
+  "clientSecret": "NoO8Q~hudFz5xoSlOySxOD9fqe-QgHBJYmM14aKD",
+  "subscriptionId": "ac113154-2e6f-499c-9be7-09bd5fba4d3a",
+  "tenantId": "8f47ad71-44ca-48bf-afe3-56b9360a4495",
+  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
+  "resourceManagerEndpointUrl": "https://management.azure.com/",
+  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
+  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
+  "galleryEndpointUrl": "https://gallery.azure.com/",
+  "managementEndpointUrl": "https://management.core.windows.net/"
+}
+
+az ad sp show --id 5a0b7605-1a9e-4b6f-a0a0-c5c8fa916bb6
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#servicePrincipals/$entity",
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "ml-auth",
+  "appId": "5a0b7605-1a9e-4b6f-a0a0-c5c8fa916bb6",
+  "appOwnerOrganizationId": "8f47ad71-44ca-48bf-afe3-56b9360a4495",
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "applicationTemplateId": null,
+  "createdDateTime": "2022-09-03T17:54:55Z",
+  "deletedDateTime": null,
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "ml-auth",
+  "homepage": null,
+  "id": "172a8f25-ea50-4be9-9842-b64c24e19d93",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "5a0b7605-1a9e-4b6f-a0a0-c5c8fa916bb6"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADandPersonalMicrosoftAccount",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

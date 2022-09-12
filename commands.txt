@@ -1,0 +1,1 @@
+az ml workspace share -w ml-udacity -g mustafa.mohammed-rg --user 172a8f25-ea50-4be9-9842-b64c24e19d93 --role owner
